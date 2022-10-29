@@ -28,16 +28,15 @@ function playRound(playerSelection, computerSelection) {
     return "It's a Tie!"
     }
 }   
-const playerSelection = "Scissors";
-const computerSelection = getComputerChoice();
-const results = playRound();
+
 
 function game() { 
-  playRound(results){
-    for (let i = 0; i < 5; i++){
-      console.log(results);
-    }
+  for (let i = 0; i < 5; i++){
+     const playerSelection() = prompt("Rock, Paper, or Scissors?");
+     const computerSelection = getComputerChoice();
+     console.log(playRound(playerSelection, computerSelection), i);
   }
 }
+ 
  
 
