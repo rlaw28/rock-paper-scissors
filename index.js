@@ -1,9 +1,26 @@
- let compChoice = ["Rock", "Paper", "Scissors"]
+ const rock = document.querySelector('.rock');
+rock.addEventListener('click', () => {
+  playerChoice = 'rock';
+});
+
+const paper = document.querySelector('.paper');
+paper.addEventListener('click', () => {
+  playerChoice = 'paper';
+});
+
+const scissors = document.querySelector('.scissors');
+scissors.addEventListener('click', () => {
+  playerChoice = 'scissors';
+});
+
+
+
+let compChoice = ["Rock", "Paper", "Scissors"]
 
 function getComputerChoice() {
   choice = compChoice[Math.floor(Math.random() * compChoice.length)]
     return choice;
-}
+};
 
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection ){
@@ -28,19 +45,19 @@ function playRound(playerSelection, computerSelection) {
     return "You Lose, Scissors beats Paper";
   }
     
-}   
+};  
 
 
 
 function game() { 
-  for (let i = 0; i < 5; i++){
-    let playerSelection = prompt("Rock, Paper, or Scissors?");
-    playerSelection = playerSelection.toLowerCase();
-    let computerSelection = getComputerChoice();
-    computerSelection = computerSelection.toLowerCase();
-    console.log(playRound(playerSelection, computerSelection), i);
-  }
-}
+
+     let playerSelection = prompt("Rock, Paper, or Scissors?");
+    //  playerSelection = playerSelection.toLowerCase();
+     let computerSelection = getComputerChoice();
+    //  computerSelection = computerSelection.toLowerCase();
+    console.log(playRound(playerSelection, computerSelection));
+
+};
   
  
 
