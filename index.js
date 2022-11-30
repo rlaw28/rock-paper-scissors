@@ -1,27 +1,12 @@
- const rock = document.querySelector('.rock');
-rock.addEventListener('click', () => {
-  playerChoice = 'rock';
-});
-
-const paper = document.querySelector('.paper');
-paper.addEventListener('click', () => {
-  playerChoice = 'paper';
-});
-
-const scissors = document.querySelector('.scissors');
-scissors.addEventListener('click', () => {
-  playerChoice = 'scissors';
-});
-
-
-
-let compChoice = ["Rock", "Paper", "Scissors"]
+let compChoice = ["rock", "paper", "scissors"]
 
 function getComputerChoice() {
   choice = compChoice[Math.floor(Math.random() * compChoice.length)]
     return choice;
 };
 
+
+  
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection ){
     return "It's a Tie!";
@@ -48,16 +33,31 @@ function playRound(playerSelection, computerSelection) {
 };  
 
 
+  const rock = document.querySelector('.rock');
+  rock.addEventListener('click', () => {
+    playerSelection = 'rock';
+    console.log(playerSelection);
+  });
+  
+  const paper = document.querySelector('.paper');
+  paper.addEventListener('click', () => {
+    playerSelection = 'paper';
+  });
+
+  const scissors = document.querySelector('.scissors');
+  scissors.addEventListener('click', () => {
+    playerSelection = 'scissors';
+  });
+
+
+
 
 function game() { 
-
-     let playerSelection = prompt("Rock, Paper, or Scissors?");
-    //  playerSelection = playerSelection.toLowerCase();
-     let computerSelection = getComputerChoice();
-    //  computerSelection = computerSelection.toLowerCase();
-    console.log(playRound(playerSelection, computerSelection));
-
+  let computerSelection = getComputerChoice();
+  let playerSelection = [rock, paper, scissors];
+  playRound(playerSelection, computerSelection);
 };
   
+const result = document.querySelector('.results');
+result.innerText;
  
-
