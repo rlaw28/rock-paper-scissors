@@ -7,7 +7,7 @@ function getComputerChoice() {
 
 
   
-function playRound(playerSelection, computerSelection) {
+const playRound = (playerSelection, computerSelection) => {
   if (playerSelection === computerSelection ){
     return "It's a Tie!";
     }
@@ -33,31 +33,36 @@ function playRound(playerSelection, computerSelection) {
 };  
 
 
-  const rock = document.querySelector('.rock');
-  rock.addEventListener('click', () => {
-    playerSelection = 'rock';
-    console.log(playerSelection);
-  });
-  
-  const paper = document.querySelector('.paper');
-  paper.addEventListener('click', () => {
-    playerSelection = 'paper';
-  });
 
-  const scissors = document.querySelector('.scissors');
+const rock = document.querySelector('#rock');
+  
+rock.addEventListener('click', () => {
+  playerSelection = 'rock';
+  computerSelection = getComputerChoice();
+  console.log(playRound(playerSelection, computerSelection))
+});
+
+  
+const paper = document.querySelector('#paper');
+  
+    paper.addEventListener('click', () => {
+      playerSelection = 'paper';
+      computerSelection = getComputerChoice();
+      console.log(playRound(playerSelection, computerSelection));
+});
+
+
+const scissors = document.querySelector('#scissors');
+  
   scissors.addEventListener('click', () => {
     playerSelection = 'scissors';
-  });
+    computerSelection = getComputerChoice();
+    console.log(playRound(playerSelection, computerSelection));
+});
 
 
 
-
-function game() { 
-  let computerSelection = getComputerChoice();
-  let playerSelection = [rock, paper, scissors];
-  playRound(playerSelection, computerSelection);
-};
   
-const result = document.querySelector('.results');
-result.innerText;
+const results = document.querySelector('.results');
+results.innerText += result;
  
