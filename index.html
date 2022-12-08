@@ -4,20 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Rock, Paper, Scissors.</title>
 </head>
 <body>
-   <h1 class="gameText" id="playerText">Player: </h1>
-   <h1 class="gameText" id="computerText">Computer: </h1>
-   <h1 class="gameText" id="resultText"></h1>
-   <h3 class="gameText" id="playerPoints">Your points: 0</h3>
-   <h3 class="gameText" id="computerPoints">Computer points: 0</h3>
-
-   <button class="choiceBtn">rock</button>
-   <button class="choiceBtn">paper</button>
-   <button class="choiceBtn">scissors</button>
+<div class="game-container">
+    <div class="selection">
+        <h1 class="gameText" id="playerText">Player: </h1>
+        <h1 class="gameText" id="computerText">Computer: </h1>
+    </div>
+    <div class="result">
+        <h1 class="gameText" id="resultText"></h1>
+    </div>
+    <div class="points">
+        <h2 class="gameText" id="playerPoints">Your points: 0</h2>
+        <h2 class="gameText" id="computerPoints">Computer points: 0</h2>
+    </div>
+</div>
+<div class="button-container">
+    <div class="choice-container">
+        <button class="choiceBtn">Rock</button>
+        <button class="choiceBtn">Paper</button>
+        <button class="choiceBtn">Scissors</button>
+    </div>
    <button class="newGame">New Game</button>
-
+</div>
 <script src="./index.js"></script>
 </body>
 </html>
