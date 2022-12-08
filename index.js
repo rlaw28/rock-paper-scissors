@@ -25,7 +25,7 @@ choiceBtns.forEach(button => button.addEventListener('click', () => {
 
 
 function getComputerChoice() {
-  let computerArray = ["rock", "paper", "scissors"];
+  let computerArray = ["Rock", "Paper", "Scissors"];
   computer = computerArray[Math.floor(Math.random() * computerArray.length)];
 };
 
@@ -40,22 +40,22 @@ function gameResult() {
   if (computerPoints == 5) {
     return "You Lost!"
   }
-    else if (player == "rock" && computer == "scissors") {
+    else if (player == "Rock" && computer == "Scissors") {
       playerPoints += 1
     }
-    else if (player == "paper" && computer == "rock") {
+    else if (player == "Paper" && computer == "Rock") {
       playerPoints += 1
     }
-    else if (player == "scissors" && computer == "paper") {
+    else if (player == "Scissors" && computer == "Paper") {
       playerPoints += 1
   }
-    else if (computer == "rock" && player == "scissors") {
+    else if (computer == "Rock" && player == "Scissors") {
       computerPoints += 1
     }
-    else if (computer == "paper" && player== "rock") {
+    else if (computer == "Paper" && player== "Rock") {
       computerPoints += 1
     }
-    else if (computer == "scissors" && player == "paper") {
+    else if (computer == "Scissors" && player == "Paper") {
       computerPoints += 1
     }
 };
